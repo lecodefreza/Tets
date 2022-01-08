@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="styleQR.css">>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <h1 id="titles">Générez un QR-CODE</h1>
+
+    <div class="center">
+        <div class="form">
+          <div class="form-element">
+            <label for="data-ip" >Entrez le lien :</label>
+            <input type="text" id="data-ip" value="https://" >
+            <span id="error"> </span>
+            <br>
+          </div>
+          <div class="form-element">
+            <button>Generate QR Code</button>
+          </div>
+        </div>
+        <div class="qr-img">
+          <img src="">
+        </div>
+      </div>
+
+</div>
+ 
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-meta'></i>
+        <div class="logo_name">Test</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+
+        <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="#">
+        <i class='bx bxs-plus-circle'></i>
+         <span class="links_name">Ajouter des Plat</span>
+       </a>
+       <span class="tooltip">Plat</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bxs-discount'></i>
+         <span class="links_name">Crée des promo</span>
+       </a>
+       <span class="tooltip">Promo</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bxs-dollar-circle' ></i>
+         <span class="links_name">Chiffre Affaires</span>
+       </a>
+       <span class="tooltip">Chiffres Affaires</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bxs-server'></i>
+         <span class="links_name">Gestion des Serveur</span>
+       </a>
+       <span class="tooltip">Server</span>
+     </li>
+     <li>
+       <a onclick="stateColor" href="#">
+        <i class='bx bx-receipt'></i>
+         <span class="links_name">Ticket</span>
+       </a>
+       <span class="tooltip">Ticket</span>
+     </li>
+
+     <li>
+      <a href="QR-CODE.html">
+        <i class='bx bxs-edit-alt bx-flip-horizontal bx-tada' ></i>
+        <span class="links_name">QR-CODE</span>
+      </a>
+      <span class="tooltip">QR-CODE</span>
+    </li>
+
+
+
+      <script src="script.js"></script>
+
+
+      <script>
+
+let BASE = document.getElementById("center");
+let inputes = document.getElementById('data-ip');
+let errors = document.getElementById('error');
+
+inputes.addEventListener("input", function(e){
+
+  if(inputes.value == ""){
+    errors.innerHTML = "N'a tu pas oublier quelque chose ? 🧐  ";
+    errors.style.color = 'black';
+    errors.style.fontSize = "15px";
+    inputes.style.border = "2px solid #ED2939";
+    inputes.style.borderRadius = "3px";
+    inputes.innerHTML = ""
+  }
+
+
+});
+
+
+      </script>
+
+</body>
+</html>
